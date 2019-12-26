@@ -289,7 +289,9 @@ def main():
     #    print(x)
 
     #Execute Read List for 1 mil rows and 10 threads
+    StartTime = time.perf_counter()
     readList(tableNames, lineList, 10000000, 64)
+    print(f'Execution Completed in {time.perf_counter() - StartTime} seconds...')
 
 if __name__ == "__main__":
     main()
